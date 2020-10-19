@@ -1,13 +1,13 @@
 <?php
 
 /** The name of the database  */
-define('DB_NAME', '***');
+define('DB_NAME', 'al361952_ei1036_42');
 
 /** Fatabase username */
-define('DB_USER', '***');
+define('DB_USER', 'al361952');
 
 /** Database password */
-define('DB_PASSWORD', '***');
+define('DB_PASSWORD', '0jo_5oj0');
 
 /** Database hostname */
 define('DB_HOST', "db-aules.uji.es");
