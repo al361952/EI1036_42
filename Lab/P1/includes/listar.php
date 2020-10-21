@@ -1,9 +1,9 @@
 <?php
 
-include("./gestionBD.php");
-function handler($pdo,$table)
+//include("./gestionBD.php");
+function printer($table)
 {
-    
+    global $pdo;
     $rows=consultar($pdo,$table);
    
     if (is_array($rows)) {/* Creamos un listado como una tabla HTML*/

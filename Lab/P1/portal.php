@@ -1,6 +1,8 @@
 <?php
     //view_form.php
 
+
+
 /**
  * * DescripciÃ³n: Controlador principal
  * *
@@ -16,7 +18,7 @@ include(dirname(__FILE__)."/includes/pdo_postgres0.php");
 $central = "";
 include(dirname(__FILE__)."/partials/header.php");
 include(dirname(__FILE__)."/partials/menu.php");
-
+include(dirname(__FILE__)."/includes/gestionBD.php");
 if (isset($_REQUEST['action'])) $action = $_REQUEST["action"];
 else $action = "home";
 $table="a_cliente";
@@ -49,9 +51,14 @@ switch ($action) {
             print "</table>";
         }
         break;
+    case 'registrar':
+        var_dump($_POST);
+        registrar($table);
+        break;
     default:
         $data["error"] = "Accion No permitida";
         $central = "/holaMundo.php";
+        break;
 }
 if ($central <> "") include(dirname(__FILE__).$central);
 include(dirname(__FILE__)."/partials/footer.php");
