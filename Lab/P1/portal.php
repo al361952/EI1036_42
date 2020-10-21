@@ -53,7 +53,7 @@ switch ($action) {
         break;
     case 'registrar':
         var_dump($_POST);
-        registrar($table);
+        pdogestor($table);
         break;
     default:
         $data["error"] = "Accion No permitida";

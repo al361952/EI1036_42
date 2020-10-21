@@ -1,10 +1,10 @@
 <?php
 
-function registrar($table)
+function registrar($pdo,$table)
 {
     print_r("gestionDB");
     ##global $pdo;
-    $pdo=new PDO("pgsql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASWORD);
+
     $datos = $_REQUEST;
     if (count($_REQUEST) < 6) {
         $data["error"] = "No has rellenado el formulario correctamente";
